@@ -1,0 +1,54 @@
+#$streichholz = 23
+$player1 = $TRUE
+$player2 = $FALSE
+$winner = $FALSE 
+$temp = 0
+
+echo $streichholz
+echo $player1
+echo $player2
+echo $temp
+
+$streichholz = read-host "wie viele hölzer?"
+
+do {
+
+    if($player1)
+    {
+        echo "player1 spielt"
+    }
+    if($player2)
+    {
+        echo "player2 spielt"
+    }
+
+    $temp = read-host "zahl zwischen 1 und 3"
+    echo $temp
+
+        $streichholz = $streichholz - $temp
+        echo $steichholz
+        $temp = 0
+
+
+            if ($player1){
+                $player1 = $FALSE
+                $player2 = $TRUE
+            }
+            if ($player2){
+                $player2 = $FALSE
+                $player1 = $TRUE
+            }
+        
+    
+
+    if ($streichholz -eq 1) {
+        $winner = $TRUE
+            if($player1) {
+                echo "player1 gewinnt"
+            }
+            else {
+                echo "player2 gewinnt"   
+            }
+    }
+
+} while(!$winner)
