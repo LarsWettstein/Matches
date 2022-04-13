@@ -1,2 +1,2 @@
-# Streichholz-Spiel
+# Matches
 Mini Spiel mit Steichhölzer
